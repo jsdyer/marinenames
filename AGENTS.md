@@ -4,6 +4,10 @@
   Never commit `dist/`. Do not add dependencies without a concrete application need.
 - Run `scripts/init.py` as documented in README, then replace the example UI,
   behaviour, tests and privacy text. Review all fields in `tool.json`.
+- Keep starting names and tunable request limits in `web/config.json`. Accept any
+  valid scientific name or AphiaID; do not restrict searches to saved examples.
+  Test configured names beyond the defaults. Preserve earlier dated captures.
+  Document exact edits, refresh and publication under Expand or customize.
 - Keep `access: "browser"` for the usable web tool. Selecting local files is not
   installation. The hub renders its standard access label from this field.
 - Keep assets and imports relative so the app works at `/<repo>/`. Do not add a

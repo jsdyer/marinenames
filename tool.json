@@ -1,16 +1,22 @@
 {
-  "id": "coolcode-tool-template",
-  "title": "CoolCode Tool Starter",
-  "description": "A browser-only example that trims lines and removes exact duplicates.",
-  "category": "security",
-  "tags": ["text", "lines", "duplicates"],
-  "icon": "scan-search",
-  "url": "/coolcode-tool-template/",
-  "source": "https://github.com/jsdyer/coolcode-tool-template",
+  "id": "marinenames",
+  "title": "Marine Names",
+  "description": "Resolve marine scientific names, inspect their taxonomy and follow reported distributions and sources.",
+  "category": "places",
+  "tags": [
+    "marine",
+    "taxonomy",
+    "species",
+    "coastal",
+    "names"
+  ],
+  "icon": "map",
+  "url": "/marinenames/",
+  "source": "https://github.com/jsdyer/marinenames",
   "hosting": "project",
   "access": "browser",
   "data_info": {
-    "mode": "local",
-    "detail": "The browser reads the text you paste and compares its lines."
+    "mode": "mixed",
+    "detail": "Look up WoRMS scientific names live or inspect dated coastal reference records."
   }
 }

@@ -1,34 +1,16 @@
 <!doctype html>
 <html lang="en-CA">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="{{DESCRIPTION}}">
-  <title>{{TITLE}} · CoolCode</title>
-  <link rel="stylesheet" href="./style.css">
-  <script type="module" src="./app.mjs"></script>
-  {{VISIT_COUNTER}}
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{{DESCRIPTION}}"><meta name="theme-color" content="#133d42"><title>{{TITLE}} · CoolCode</title><link rel="stylesheet" href="./style.css"><script type="module" src="./app.mjs"></script>{{VISIT_COUNTER}}</head>
 <body data-tool-id="{{TOOL_ID}}">
-  <a class="skip" href="#main">Skip to content</a>
-  <header><a href="https://coolcode.ca/">← CoolCode.ca</a><a href="{{SOURCE_URL}}">Source &amp; instructions ↗</a></header>
-  <main id="main">
-    <p class="eyebrow">Browser tool starter</p>
-    <h1>{{TITLE}}</h1>
-    <p class="intro">{{DESCRIPTION}}</p>
-    <section aria-labelledby="example-title">
-      <h2 id="example-title">Clean a list</h2>
-      <p>Trim spaces, skip blank lines and remove exact duplicates. Capitalization stays distinct.</p>
-      <div class="panels">
-        <div><label for="input">Your lines</label><textarea id="input" rows="10" maxlength="100000" spellcheck="false" placeholder="Paste one item per line"></textarea></div>
-        <div><label for="output">Cleaned lines</label><textarea id="output" rows="10" readonly spellcheck="false"></textarea></div>
-      </div>
-      <div class="actions"><button id="sample" type="button">Load example</button><button id="clear" type="button">Clear</button><button id="copy" type="button" hidden>Copy result</button></div>
-      <p id="status" role="status" aria-live="polite">Paste a list to begin.</p>
-      <noscript><p>This tool needs JavaScript to process your text. The source is available above.</p></noscript>
-    </section>
-    <aside aria-label="Privacy"><strong>Stays on your device.</strong> The browser processes your text in this tab. Reloading clears it.</aside>
-  </main>
-  <footer>Part of <a href="https://coolcode.ca/">the CoolCode collection</a>. {{ISSUE_LINK}}</footer>
-</body>
-</html>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><a class="brand" href="https://coolcode.ca/">CoolCode<span>.ca</span></a><a href="#method">Sources &amp; method <span aria-hidden="true">↘</span></a></header>
+<main id="main">
+<section class="hero" aria-labelledby="title"><div><p class="eyebrow">THE COASTAL REFERENCE DESK · 01</p><h1 id="title">Marine <em>Names.</em></h1><p class="intro">One species. More than one name.<br>Find the accepted name, trace its taxonomy,<br class="wide-only"> and follow the evidence back to the sea.</p></div><div class="specimen-mark" aria-hidden="true"><svg viewBox="0 0 300 240"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M150 210C-10 140 20 10 150 25C280 10 310 140 150 210Z"/><path d="M150 210C32 118 59 19 150 25C241 19 268 118 150 210Z"/><path d="M150 210C70 110 89 22 150 25C211 22 230 110 150 210Z"/><path d="M150 210C107 108 117 24 150 25C183 24 193 108 150 210Z"/><path d="M150 210V25M55 73Q150 106 245 73M41 109Q150 150 259 109M65 151Q150 177 235 151"/></g></svg><span>NAME · CLASSIFY · CONNECT</span></div></section>
+<section class="lookup" aria-labelledby="search-title"><div class="lookup-heading"><span class="section-no">01 / LOOK UP</span><h2 id="search-title">Start with a scientific name.</h2><p>Or enter an AphiaID, the register’s unique name identifier.</p></div><form id="search-form"><label class="sr-only" for="query">Scientific name or AphiaID</label><div class="search-row"><input id="query" maxlength="200" placeholder="e.g. Mytilus edulis or 140480" autocomplete="off" spellcheck="false" required><button id="search" type="submit">Search WoRMS <span aria-hidden="true">↗</span></button></div><div class="search-options"><label><input id="partial" type="checkbox"> Names starting with my search</label><label><input id="marine-only" type="checkbox" checked> Marine taxa only</label><label><input id="extant-only" type="checkbox"> Living taxa only</label></div></form><div class="starters"><span>Try a coastal name</span><div id="starters"></div></div><p class="privacy-note">Searching sends the name or ID to WoRMS. Saved examples and imported files open locally.</p></section>
+<p id="status" role="status" aria-live="polite">Opening saved reference records…</p>
+<section class="workspace" aria-label="Name results and evidence"><aside class="name-list"><div class="list-header"><p class="section-no">02 / YOUR REFERENCE SHELF</p><h2 id="results-title">Saved names</h2><p id="result-count"></p></div><label for="capture">Saved capture</label><select id="capture"></select><div id="results"></div><button id="more-results" class="secondary" hidden>Load next 50 names</button><div class="shelf-actions"><button id="saved" class="text-button">Return to saved names</button><label class="file-button" for="import">Import a Marine Names JSON file<input id="import" type="file" accept="application/json,.json"></label></div></aside>
+<article id="detail" class="detail" aria-label="Selected marine name"><div class="empty">Choose a name to open its record.</div></article></section>
+<section class="method" id="method"><p class="section-no">03 / FIELD NOTES</p><div class="method-grid"><div><h2>A name is a link<br>to the evidence.</h2><p>This reference desk reads the World Register of Marine Species (WoRMS), maintained by expert editors and hosted at the Flanders Marine Institute (VLIZ).</p></div><div><h3>How to read this record</h3><p><strong>Accepted</strong> is the register’s current taxonomic status. Synonyms and alternative representations connect other names to it; they are not a dated history of name changes.</p><p><strong>Distributions</strong> are the locations reported in this register. They are not a complete range map or confirmation that a species is present today. Missing records do not mean absence.</p></div><div><h3>Small captures, open searches</h3><p>Saved names are dated examples, not the limit of this tool. Search any scientific name or AphiaID, download your records, or import a previous export. Nothing you search is stored in this browser after reloading.</p><p>Record-modified dates come from WoRMS. Retrieved dates say when a copy was collected. A fresh lookup may differ from a saved capture.</p></div></div><p class="attribution">WoRMS Editorial Board (2026). World Register of Marine Species. Available at VLIZ. <a href="https://doi.org/10.14284/170">doi:10.14284/170</a>. Individual taxon citations appear with each record. Text is reused under <a href="https://www.marinespecies.org/about.php#terms">WoRMS’s attribution terms</a>; this app does not redistribute the whole register.</p><div class="method-links"><a href="https://www.marinespecies.org/rest/">WoRMS API documentation ↗</a><a href="https://coolcode.ca/museumdrawer/">Museum Drawer ↗</a><a href="{{SOURCE_URL}}">Source &amp; customization ↗</a></div></section>
+<noscript><p class="no-script">JavaScript is needed to search and inspect records. You can search directly at <a href="https://www.marinespecies.org/">WoRMS</a>.</p></noscript>
+</main><footer><a class="brand" href="https://coolcode.ca/">CoolCode.ca</a><span>Names change. Keep your source.</span>{{ISSUE_LINK}}</footer>
+</body></html>

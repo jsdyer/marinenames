@@ -1,0 +1,26 @@
+{
+  "apiBase": "https://www.marinespecies.org/rest/",
+  "timeoutMs": 25000,
+  "requestGapMs": 1000,
+  "maxImportBytes": 5000000,
+  "marineOnly": true,
+  "startingNames": [
+    {
+      "name": "Mytilus edulis",
+      "label": "Blue mussel"
+    },
+    {
+      "name": "Mytilus trossulus",
+      "label": "Pacific blue mussel"
+    },
+    {
+      "name": "Mya arenaria",
+      "label": "Soft-shell clam"
+    },
+    {
+      "name": "Saxidomus gigantea",
+      "label": "Butter clam"
+    }
+  ],
+  "extantOnly": false
+}
